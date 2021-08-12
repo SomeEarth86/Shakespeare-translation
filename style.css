@@ -1,0 +1,48 @@
+
+body {
+    
+    font-family: 'Halant', serif;
+    font-weight: 700;
+    background-color: #F0EDE6;
+}
+
+nav{
+    padding: 3rem;
+}
+
+.header{
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #DD7564;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+}
+
+textarea{
+    width: 80%;
+    padding: 1.5rem;
+}
+
+#btn-translate{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #B2DEDD;
+    font-weight: 700;
+}
+
+.op-stmt{
+    margin-top: 1rem;
+}
+
+.abt{
+    font-size: 2rem;
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
