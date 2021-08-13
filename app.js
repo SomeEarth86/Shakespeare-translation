@@ -9,10 +9,10 @@ function getTranslationURL (input){
     return serverURL+"?"+"text="+input
 }
 
-// function errorHandler(error){
-//     console.log("error Occured");
-//     alert("server Showing error");
-// }
+function errorHandler(error){
+    console.log("error Occured");
+    alert("server Showing error");
+}
 
 function btnClickHandler(){
 
@@ -23,7 +23,7 @@ function btnClickHandler(){
     .then(json =>{
         var translatedText = json.content.translatedText;
         optxt.innerText = translatedText;
-    })
+    }).catch(errorHandler)
 
 
 };
