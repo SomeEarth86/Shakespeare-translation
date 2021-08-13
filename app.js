@@ -1,16 +1,31 @@
-var btn-translate = document.querySelector(#btn-translate);
-var inptxt = document.querySelector(#txt-inpt);
-var optxt= document.querySelector(#output);
+var btn_translate = document.querySelector("#btn-translate");
+var inptxt = document.querySelector("#txt-inpt");
+var optxt= document.querySelector("#output");
 
-var serverURL = "";
+var serverURL = "https://api.funtranslations.com/translate/shakespeare.json";
 
 function getTranslationURL (input){
 
-    return serverURL+"?"+"text"+input
+    return serverURL+"?"+"text="+input
 }
 
-function (){
+// function errorHandler(error){
+//     console.log("error Occured");
+//     alert("server Showing error");
+// }
 
-}
+function btnClickHandler(){
 
-btn-translate.addEventHandler("click",btnClickHandler);
+    var inp_Txt = inptxt.value;
+
+    fetch(getTranslationURL(inp_txt))
+    .then(response => (response.json())
+    .then(json =>{
+        var translatedText = json.content.translatedText;
+        optxt.innerText = translatedText;
+    })
+
+
+};
+
+btn_translate.addEventListener("click",btnClickHandler)``
