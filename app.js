@@ -28,4 +28,4 @@ function btnClickHandler(){
 
 };
 
-btn_translate.addEventListener("click",btnClickHandler)``
+btn_translate.addEventListener("click",btnClickHandler)
