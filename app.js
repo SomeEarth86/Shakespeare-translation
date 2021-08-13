@@ -9,22 +9,21 @@ function getTranslationURL (input){
     return serverURL+"?"+"text="+input
 }
 
-function errorHandler(error){
-    console.log("error Occured");
-    alert("server Showing error");
-}
+// function errorHandler(error){
+//     console.log("error Occured",error);
+//     alert("server Showing error");
+// }
 
 function btnClickHandler(){
 
-    var inp_Txt = inptxt.value;
+    var inp_txt = inptxt.value;
 
     fetch(getTranslationURL(inp_txt))
     .then(response => (response.json())
-    .then(json =>{
-        var translatedText = json.content.translatedText;
+    .then(json => {
+        var translatedText = json.content.translated;
         optxt.innerText = translatedText;
-    }).catch(errorHandler)
-
+    })
 
 };
 
