@@ -19,9 +19,9 @@ function btnClickHandler(){
     var inp_txt = inptxt.value;
 
     fetch(getTranslationURL(inp_txt))
-    .then(response => (response.json())
+    .then(response => response.json())
     .then(json => {
-        var translatedText = json.content.translated;
+        var translatedText = json.contents.translated;
         optxt.innerText = translatedText;
     })
 
