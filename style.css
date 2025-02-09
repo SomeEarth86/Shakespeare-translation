@@ -1,69 +1,105 @@
-
 body {
-    margin: 0;
-    font-family: 'Halant', serif;
-    font-weight: 700;
-    background-color: #F0EDE6;
-    display: grid;
-    place-content: center;
+  margin: 0;
+  font-family: "Halant", serif;
+  font-weight: 700;
+  background-color: #f0ede6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-nav{
-    padding: 3rem;
+nav {
+  padding: 1.5rem;
 }
 
-.header{
-    font-size: 3rem;
-    font-weight: bolder;
-    text-align: center;
-    color: #DD7564;
-    font-family: 'Satisfy', cursive;
-    font-weight: 400;
+.header {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bolder;
+  text-align: center;
+  color: #dd7564;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
 }
 
-textarea{
-    width: 80%;
-    padding: 1.5rem;
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.text{
-    min-width: 5px;
-    max-width: 100%;
-    position: relative;
-    top: 50%;
-    display: block;
-    text-align: center;
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  min-height: 150px;
 }
 
-#btn-translate{
+.text {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+#btn-translate {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #b2dedd;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 1rem auto;
+}
+
+.op-stmt {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.output_s {
+  padding: 1.5rem;
+  border: 1px solid black;
+  background-color: white;
+  margin: 1rem 0;
+  min-height: 100px;
+  word-wrap: break-word;
+}
+
+.abt {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: auto;
+  padding: 2rem 1rem;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer div:last-child {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  nav {
     padding: 1rem;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #B2DEDD;
-    font-weight: 700;
+  }
 
-}
+  textarea {
+    padding: 1rem;
+  }
 
-.op-stmt{
-    margin-top: 6rem;
-    text-align: center;
-   
-}
-
-.output_s{
-    padding: 3rem;
-    border: 1px solid black;
-    background-color: white;
-}
-
-.abt{
-    font-size: 2rem;
-    text-align: center;
-}
-
-footer{
-    position: fixed;
-    bottom: 0;
-    
+  .output_s {
+    padding: 1rem;
+  }
 }
